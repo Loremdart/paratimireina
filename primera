@@ -1,0 +1,42 @@
+from IPython.display import Image, display
+
+def mostrar_gato():
+    display(Image(filename='gato.jpg'))
+
+def invitacion_para_novia():
+    respuesta = input("¿Quieres ser mi reina? (si/no): ").lower()
+    
+    if respuesta == "si":
+        mostrar_gato()
+        print("¡Wiii! ¡Muak! Te amo ❤️")
+    elif respuesta == "no":
+        respuesta2 = input("¿Estás segura? (si/no): ").lower()
+        if respuesta2 == "si":
+            mostrar_gato()
+            print("Segurita segurita... ¿Quieres ser mi reina? (si/no): ")
+            respuesta3 = input().lower()
+            if respuesta3 == "si":
+                mostrar_gato()
+                print("¡Wiii! ¡Muak! Te amo ❤️")
+            elif respuesta3 == "no":
+                mostrar_gato()
+                print("Segurisima... ¿Quieres ser mi reina? (si/no): ")
+                respuesta4 = input().lower()
+                if respuesta4 == "si":
+                    mostrar_gato()
+                    print("¡Wiii! ¡Muak! Te amo ❤️")
+                elif respuesta4 == "no":
+                    print("¡Entiendo! ¡Hasta luego!")
+                else:
+                    print("No es una respuesta válida.")
+            else:
+                print("No es una respuesta válida.")
+        elif respuesta2 == "no":
+            print("Segurisima... ¡Hasta luego!")
+        else:
+            print("No es una respuesta válida.")
+    else:
+        print("No es una respuesta válida.")
+
+# Invocar la función para iniciar la invitación
+invitacion_para_novia()
